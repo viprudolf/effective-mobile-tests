@@ -3,14 +3,14 @@ UI автотесты для сайта effective-mobile.ru с использо�
 
 # Effective Mobile Tests (Selenium)
 
-## 📋 Описание
+##  Описание
 Автоматизированные UI-тесты для сайта [effective-mobile.ru](https://effective-mobile.ru).  
 Используется **Python + Selenium + Pytest + Allure**.  
 Реализовано по паттерну **Page Object**.
 
 ---
 
-## 🚀 Установка
+##  Установка
 ```bash
 git clone https://github.com/yourname/effective-mobile-tests.git
 cd effective-mobile-tests

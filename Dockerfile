@@ -1,8 +1,3 @@
-FROM ubuntu:latest
-LABEL authors="viprudolf"
-
-ENTRYPOINT ["top", "-b"]
-
 FROM python:3.10
 
 WORKDIR /app
