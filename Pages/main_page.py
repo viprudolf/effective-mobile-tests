@@ -51,7 +51,7 @@ class MainPage:
             if box.is_enabled():
                 print(f"Блок найден и видим: {box.text}")
 
-    @allure.feature("Main Page")
+    @allure.feature("Проверка клика и переевода в блок 'О нас'")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Проверка клика на ссылку 'О нас'")
     def click_about(self):
@@ -61,7 +61,7 @@ class MainPage:
             self.check_box(self.about_box)
         assert "#about" in self.driver.current_url, "Ссылка 'О нас' не прокрутила страницу к блоку"
 
-    @allure.feature("Main Page")
+    @allure.feature("Проверка клика и переевода в блок 'Услуги'")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Проверка клика на ссылку 'Услуги'")
     def click_services(self):
@@ -71,7 +71,7 @@ class MainPage:
             self.check_box(self.services_box)
         assert "#moreinfo" in self.driver.current_url, "Ссылка 'Услуги' не прокрутила страницу к блоку"
 
-    @allure.feature("Main Page")
+    @allure.feature("Проверка клика и переевода в блок 'Проекты'")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Проверка клика на ссылку 'Проекты'")
     def click_projects(self):
@@ -81,7 +81,7 @@ class MainPage:
             self.check_box(self.projects_box)
         assert "#cases" in self.driver.current_url, "Ссылка 'Проекты' не прокрутила страницу к блоку"
 
-    @allure.feature("Main Page")
+    @allure.feature("Проверка клика и переевода в блок 'Отзыв'")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Проверка клика на ссылку 'Отзыв'")
     def click_reviews(self):
@@ -91,7 +91,7 @@ class MainPage:
             self.check_box(self.reviews_box)
         assert "#Reviews" in self.driver.current_url, "Ссылка 'Отзывы' не прокрутила страницу к блоку"
 
-    @allure.feature("Main Page")
+    @allure.feature("Проверка клика и переевода в блок 'Контакты'")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Проверка клика на ссылку 'Контакты'")
     def click_contacts(self):
