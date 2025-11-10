@@ -1,6 +1,5 @@
 from selenium import webdriver
 from Pages.main_page import MainPage
-import time
 
 
 def test_navigation_links():
@@ -15,4 +14,5 @@ def test_navigation_links():
         page.click_projects()
         page.click_reviews()
         page.click_contacts()
+
 
