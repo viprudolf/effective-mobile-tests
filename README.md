@@ -14,8 +14,20 @@ UI автотесты для сайта [effective-mobile.ru](https://effective-
 - **Selenium** для работы с браузером
 - **Pytest** для запуска тестов
 - **Allure** для генерации красивых отчётов
+- **Docker** для запуска тестов в контейнере без необходимости настраивать локальное окружение
 
 Тесты организованы по паттерну **Page Object** для удобства поддержки и расширяемости.
+
+---
+
+## Структура проекта
+
+- `Pages/` — файлы с объектами страниц (Page Object)
+- `Tests/` — тестовые сценарии
+- `allure-results/` — результаты тестов для Allure (создаются при запуске)
+- `reports/` — временная папка для генерации и просмотра отчёта Allure
+- `requirements.txt` — зависимости Python
+- `Dockerfile` — конфигурация для запуска тестов в контейнере
 
 ---
 
@@ -51,3 +63,28 @@ pytest --alluredir=reports/
 allure serve reports/
 ```
 
+## Запуск через Docker
+
+1. Собираем Docker-образ:
+
+```bash
+docker build -t effective-tests .
+```
+
+2. Создаём папку для Allure-результатов на хосте:
+
+```bash
+mkdir .\allure-results
+```
+
+3. Запускаем контейнер с монтированием папки для Allure:
+
+```bash
+docker run --rm -it -v ${PWD}/allure-results:/app/allure-results -e RUN_IN_DOCKER=1 effective-tests pytest --alluredir=/app/allure-results
+```
+
+4. Генерируем и открываем HTML-отчет:
+
+```bash
+allure serve ./allure-results
+```
