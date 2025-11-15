@@ -22,8 +22,9 @@ UI автотесты для сайта [effective-mobile.ru](https://effective-
 
 ## Структура проекта
 
-- `Pages/` — файлы с объектами страниц (Page Object)
+- `Pages/` — Page Object для страниц
 - `Tests/` — тестовые сценарии
+- `conftest.py` — фикстуры pytest и конфигурация Selenium
 - `allure-results/` — результаты тестов для Allure (создаются при запуске)
 - `reports/` — временная папка для генерации и просмотра отчёта Allure
 - `requirements.txt` — зависимости Python
